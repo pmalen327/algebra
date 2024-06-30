@@ -1,4 +1,5 @@
 # an attempt at making a category class lol
+# its possible this extendes Group or vice versa, I will have to brush up on some stuff
 
 class Category:
 
@@ -49,6 +50,3 @@ print(cat1.get_name)
 print(functor.map_object('A'))
 print(functor.map_morphism('f'))
 print(functor.get_preimage(12))
-
-
-
