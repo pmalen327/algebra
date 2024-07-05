@@ -1,6 +1,8 @@
 # an attempt at making a category class lol
 # its possible this extendes Group or vice versa, I will have to brush up on some stuff
 
+# morphisms are internal to each category, they are maps between objects,
+    # functors map objects and morphisms between categories
 class Category:
 
     def __init__(self, objects: dict, morphisms: dict, **kwargs) -> None:
@@ -18,7 +20,7 @@ class Category:
     def get_morphisms(self) -> dict:
         return self.morphisms
     
-
+    
 class Functor:
     
     def __init__(self, mapping_objects: dict, mapping_morphisms: dict) -> None:
@@ -36,7 +38,7 @@ class Functor:
             return {i for i in self.mapping_objects if 
                     self.mapping_objects[i] == image}
         else:
-            return f'the preimage of {image} is empty'
+            return f'The preimage of {image} is empty.'
 
 
 # testing
